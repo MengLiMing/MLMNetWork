@@ -1,0 +1,16 @@
+PODS:
+  - MLMNetWork (0.1.0)
+
+DEPENDENCIES:
+  - MLMNetWork (from `../`)
+
+EXTERNAL SOURCES:
+  MLMNetWork:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MLMNetWork: 45946d42e9d23e87b17c6b4417f743c0c9475477
+
+PODFILE CHECKSUM: 4ca31b7bce0cde1d45dbe3ee93b21fe239439557
+
+COCOAPODS: 1.9.2
