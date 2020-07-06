@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MLMNetWork_Example' do
+  pod 'MLMNetWork', :path => '../'
+
+  target 'MLMNetWork_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
