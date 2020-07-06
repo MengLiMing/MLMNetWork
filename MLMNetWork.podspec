@@ -28,8 +28,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   
   s.dependency 'HandyJSON', '~> 5.0.1'
-  s.dependency 'RxSwift', '~> 5'
-  s.dependency 'RxCocoa', '~> 5'
+  s.dependency 'RxSwift'
+  s.dependency 'RxCocoa'
   
   # s.resource_bundles = {
   #   'MLMNetWork' => ['MLMNetWork/Assets/*.png']
