@@ -1,16 +1,37 @@
 PODS:
-  - MLMNetWork (0.1.0)
+  - HandyJSON (5.0.2)
+  - MLMNetWork (0.0.2):
+    - HandyJSON (~> 5.0.1)
+    - RxCocoa
+    - RxSwift
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
 
 DEPENDENCIES:
   - MLMNetWork (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - HandyJSON
+    - RxCocoa
+    - RxRelay
+    - RxSwift
 
 EXTERNAL SOURCES:
   MLMNetWork:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MLMNetWork: 45946d42e9d23e87b17c6b4417f743c0c9475477
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  MLMNetWork: 2dfdc6a0c3301472b803dd3f9f60bf4118b38410
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 4ca31b7bce0cde1d45dbe3ee93b21fe239439557
+PODFILE CHECKSUM: efe07475e91f8c8a468435e7b0aee5a527262633
 
-COCOAPODS: 1.9.2
+COCOAPODS: 1.9.3

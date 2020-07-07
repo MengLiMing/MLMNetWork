@@ -1,4 +1,4 @@
-framework module MLMNetWork {
+module MLMNetWork {
   umbrella header "MLMNetWork-umbrella.h"
 
   export *

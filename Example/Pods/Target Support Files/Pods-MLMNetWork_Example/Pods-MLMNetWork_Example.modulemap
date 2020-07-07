@@ -1,4 +1,4 @@
-framework module Pods_MLMNetWork_Example {
+module Pods_MLMNetWork_Example {
   umbrella header "Pods-MLMNetWork_Example-umbrella.h"
 
   export *
