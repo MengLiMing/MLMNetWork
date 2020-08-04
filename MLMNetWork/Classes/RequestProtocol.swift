@@ -34,7 +34,7 @@ extension RequestProtocol {
                            failHandler: @escaping FailHandler) -> URLSessionTask? where T: ResponseModelProtocol {
         self.request(successHandler: { (dataTask, responseObject) in
             guard let model = T.responseModel(responseObject) else {
-                let error = NSError(domain: "数据解析失败", code: -200, userInfo: nil)
+                let error = NSError(domain: "数据解析失败", code: -200, userInfo: responseObject as? [String: Any])
                 failHandler(dataTask, error)
                 return
             }
