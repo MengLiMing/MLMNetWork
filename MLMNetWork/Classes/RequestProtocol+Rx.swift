@@ -21,7 +21,5 @@ public extension Reactive where Base: RequestProtocol {
                 task?.cancel()
             }
         }
-        .observeOn(ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global()))
-        .subscribeOn(MainScheduler.instance)
     }
 }
