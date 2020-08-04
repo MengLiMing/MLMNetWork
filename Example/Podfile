@@ -1,12 +1,14 @@
 # use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 inhibit_all_warnings!
 
 project 'MLMNetWork.xcodeproj'
 target 'MLMNetWork_Example' do
   pod 'MLMNetWork', :path => '../'
+
+  pod 'AFNetworking'
 
   target 'MLMNetWork_Tests' do
     inherit! :search_paths

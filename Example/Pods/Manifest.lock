@@ -1,9 +1,26 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - Alamofire (5.2.2)
   - HandyJSON (5.0.2)
-  - MLMNetWork (0.0.2):
+  - MLMNetWork (0.0.3):
+    - Alamofire (~> 5.2)
     - HandyJSON (~> 5.0.1)
-    - RxCocoa
-    - RxSwift
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -12,10 +29,13 @@ PODS:
   - RxSwift (5.1.1)
 
 DEPENDENCIES:
+  - AFNetworking
   - MLMNetWork (from `../`)
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
+    - Alamofire
     - HandyJSON
     - RxCocoa
     - RxRelay
@@ -26,12 +46,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
-  MLMNetWork: 2dfdc6a0c3301472b803dd3f9f60bf4118b38410
+  MLMNetWork: 4da23dc464dbc16a40ed9e52181a841be9b1c695
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: efe07475e91f8c8a468435e7b0aee5a527262633
+PODFILE CHECKSUM: cbf430551c1162bbaf8aade6a3e5cdbb64ffb9f5
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0.beta.1

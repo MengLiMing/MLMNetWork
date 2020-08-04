@@ -21,8 +21,8 @@ Pod::Spec.new do |s|
   s.author           = { 'MengLiMing' => '920459250@qq.com' }
   s.source           = { :git => 'https://github.com/MengLiMing/MLMNetWork.git', :tag => s.version.to_s }
 
-#  s.platform = :ios, '9.0'
-  s.ios.deployment_target = '9.0'
+  s.platform = :ios, '10.0'
+  s.ios.deployment_target = '10.0'
   
   s.source_files = 'MLMNetWork/Classes/**/*'
   
@@ -30,12 +30,11 @@ Pod::Spec.new do |s|
   s.dependency 'RxCocoa', '~> 5'
   s.dependency 'Alamofire', '~> 5.2'
   s.dependency 'HandyJSON', '~> 5.0.1'
-  
+
   #  s.requires_arc = true
   # s.resource_bundles = {
   #   'MLMNetWork' => ['MLMNetWork/Assets/*.png']
   # }
 
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
