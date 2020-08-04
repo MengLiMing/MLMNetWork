@@ -19,20 +19,19 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/MengLiMing/MLMNetWork'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'MengLiMing' => '920459250@qq.com' }
-  s.platform = :ios, '9.0'
+  s.source           = { :git => 'https://github.com/MengLiMing/MLMNetWork.git', :tag => s.version.to_s }
+
+#  s.platform = :ios, '9.0'
   s.ios.deployment_target = '9.0'
   
-  s.source           = { :git => 'https://github.com/MengLiMing/MLMNetWork.git', :tag => s.version.to_s }
   s.source_files = 'MLMNetWork/Classes/**/*'
   
-  s.requires_arc = true
-  
+  s.dependency 'RxSwift', '~> 5'
+  s.dependency 'RxCocoa', '~> 5'
+  s.dependency 'Alamofire', '~> 5.2'
   s.dependency 'HandyJSON', '~> 5.0.1'
-  s.dependency 'RxSwift'
-  s.dependency 'RxCocoa'
-  s.dependency 'Alamofire'
-  s.dependency 'AFNetworking'
   
+  #  s.requires_arc = true
   # s.resource_bundles = {
   #   'MLMNetWork' => ['MLMNetWork/Assets/*.png']
   # }
