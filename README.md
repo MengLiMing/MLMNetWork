@@ -20,6 +20,9 @@ it, simply add the following line to your Podfile:
 pod 'MLMNetWork'
 ```
 
+## 支持使用清华源
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
 ## Author
 
 MengLiMing, 920459250@qq.com
