@@ -6,9 +6,8 @@ inhibit_all_warnings!
 
 project 'MLMNetWork.xcodeproj'
 target 'MLMNetWork_Example' do
-  pod 'MLMNetWork', :path => '../'
 
-  pod 'AFNetworking'
+  pod 'MLMNetWork', :path => '../'
 
   target 'MLMNetWork_Tests' do
     inherit! :search_paths

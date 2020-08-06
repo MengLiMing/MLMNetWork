@@ -9,7 +9,9 @@
 import Foundation
 import MLMNetWork
 
-class Request<Data>: MRequest  {    
+class Request<Data>: MRequest  {
+    typealias DataType = Data
+    
     typealias Response = ResponseModel<Data>
 
     var headers: [String : String]?

@@ -1,6 +1,6 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/HandyJSON" "${PODS_ROOT}/Headers/Public/RxCocoa"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/HandyJSON" "${PODS_ROOT}/Headers/Public/RxCocoa"
 OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON/HandyJSON.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/MLMNetWork/MLMNetWork.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/RxRelay/RxRelay.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift.modulemap"
 OTHER_LDFLAGS = $(inherited) -framework "CFNetwork"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON/HandyJSON.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/MLMNetWork/MLMNetWork.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/RxRelay/RxRelay.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift.modulemap"

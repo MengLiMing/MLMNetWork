@@ -1,35 +1,18 @@
 PODS:
-  - AFNetworking (4.0.1):
-    - AFNetworking/NSURLSession (= 4.0.1)
-    - AFNetworking/Reachability (= 4.0.1)
-    - AFNetworking/Security (= 4.0.1)
-    - AFNetworking/Serialization (= 4.0.1)
-    - AFNetworking/UIKit (= 4.0.1)
-  - AFNetworking/NSURLSession (4.0.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (4.0.1)
-  - AFNetworking/Security (4.0.1)
-  - AFNetworking/Serialization (4.0.1)
-  - AFNetworking/UIKit (4.0.1):
-    - AFNetworking/NSURLSession
   - Alamofire (5.2.2)
   - HandyJSON (5.0.2)
-  - MLMNetWork (0.0.5):
-    - Alamofire (~> 5.2)
+  - MLMNetWork (0.1.0):
     - HandyJSON (~> 5.0.1)
-    - MLMNetWork/Client (= 0.0.5)
-    - MLMNetWork/Protocol (= 0.0.5)
+    - MLMNetWork/AlamofireClient (= 0.1.0)
+    - MLMNetWork/Protocol (= 0.1.0)
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
-  - MLMNetWork/Client (0.0.5):
+  - MLMNetWork/AlamofireClient (0.1.0):
     - Alamofire (~> 5.2)
     - HandyJSON (~> 5.0.1)
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
-  - MLMNetWork/Protocol (0.0.5):
-    - Alamofire (~> 5.2)
+  - MLMNetWork/Protocol (0.1.0):
     - HandyJSON (~> 5.0.1)
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
@@ -41,12 +24,10 @@ PODS:
   - RxSwift (5.1.1)
 
 DEPENDENCIES:
-  - AFNetworking
   - MLMNetWork (from `../`)
 
 SPEC REPOS:
   trunk:
-    - AFNetworking
     - Alamofire
     - HandyJSON
     - RxCocoa
@@ -58,14 +39,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
-  MLMNetWork: ffc2f989c7aa1f247870b2a6c8aaf87ff386e8b6
+  MLMNetWork: 174486675af21adf9a9cd7ecb552339809014eee
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: cbf430551c1162bbaf8aade6a3e5cdbb64ffb9f5
+PODFILE CHECKSUM: 10e6bb48444acca07b524a2ceab577d77d1f07e6
 
 COCOAPODS: 1.10.0.beta.1

@@ -20,7 +20,9 @@ public protocol Client {
 
 public extension Client {
     @discardableResult
-    func send<T: Request>(_ request: T, successHandler: @escaping RequestSuccessHandler<T.Response>, failureHandler: @escaping RequestFailureHandler) -> URLSessionTask? {
+    func send<T: Request>(_ request: T,
+                          successHandler: @escaping RequestSuccessHandler<T.Response>,
+                          failureHandler: @escaping RequestFailureHandler) -> URLSessionTask? {
         return self.send(request) { (dataTask, result) in
             switch result {
             case let .success(response):
@@ -30,5 +32,4 @@ public extension Client {
             }
         }
     }
-    
 }

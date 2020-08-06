@@ -21,20 +21,20 @@ Pod::Spec.new do |s|
   s.author           = { 'MengLiMing' => '920459250@qq.com' }
   s.source           = { :git => 'https://github.com/MengLiMing/MLMNetWork.git', :tag => s.version.to_s }
 
-  s.platform = :ios, '10.0'
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '8.0'
   
-  s.source_files = 'MLMNetWork/*.swift'
   s.subspec 'Protocol' do |ss|
     ss.source_files = 'MLMNetWork/Protocol/*.swift'
   end
-  s.subspec 'Client' do |ss|
-    ss.source_files = 'MLMNetWork/Client/*.swift'
+  s.subspec 'AlamofireClient' do |ss|
+    ss.ios.deployment_target = '10.0'
+    ss.dependency 'Alamofire', '~> 5.2'
+    
+    ss.source_files = 'MLMNetWork/AlamofireClient/*.swift'
   end
-  
+
   s.dependency 'RxSwift', '~> 5'
   s.dependency 'RxCocoa', '~> 5'
-  s.dependency 'Alamofire', '~> 5.2'
   s.dependency 'HandyJSON', '~> 5.0.1'
 
   #  s.requires_arc = true
