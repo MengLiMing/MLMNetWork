@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MLMNetWork'
-  s.version          = '0.0.4'
+  s.version          = '0.1.0'
   s.summary          = 'Swift网络请求'
 
 
@@ -24,7 +24,13 @@ Pod::Spec.new do |s|
   s.platform = :ios, '10.0'
   s.ios.deployment_target = '10.0'
   
-  s.source_files = 'MLMNetWork/Classes/**/*'
+  s.source_files = 'MLMNetWork/*.swift'
+  s.subspec 'Protocol' do |ss|
+    ss.source_files = 'MLMNetWork/Protocol/*.swift'
+  end
+  s.subspec 'Client' do |ss|
+    ss.source_files = 'MLMNetWork/Client/*.swift'
+  end
   
   s.dependency 'RxSwift', '~> 5'
   s.dependency 'RxCocoa', '~> 5'

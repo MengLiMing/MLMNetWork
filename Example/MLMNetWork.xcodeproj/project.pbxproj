@@ -13,6 +13,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		953C7F2624DBAEC0005A5428 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C7F2524DBAEC0005A5428 /* ResponseModel.swift */; };
+		953C7F2824DBAECA005A5428 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C7F2724DBAECA005A5428 /* Request.swift */; };
+		953C7F2A24DBAF44005A5428 /* NetWorkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C7F2924DBAF44005A5428 /* NetWorkClient.swift */; };
 		E7B246670B75C35B9C2C69EA /* libPods-MLMNetWork_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09581F3BBF4C885070AC3AC9 /* libPods-MLMNetWork_Tests.a */; };
 		FB2BAEE47E364F60227E2C63 /* libPods-MLMNetWork_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0773B65DE47CA1BEECC0B13 /* libPods-MLMNetWork_Example.a */; };
 /* End PBXBuildFile section */
@@ -45,6 +48,9 @@
 		6E90BC38EA491D4CA82AA80C /* Pods-MLMNetWork_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLMNetWork_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MLMNetWork_Tests/Pods-MLMNetWork_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		893850C8B4153B2F63C9D5E6 /* Pods-MLMNetWork_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLMNetWork_Example.release.xcconfig"; path = "Target Support Files/Pods-MLMNetWork_Example/Pods-MLMNetWork_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9519334124D93385002DE721 /* MLMNetWork_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLMNetWork_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		953C7F2524DBAEC0005A5428 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		953C7F2724DBAECA005A5428 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		953C7F2924DBAF44005A5428 /* NetWorkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkClient.swift; sourceTree = "<group>"; };
 		C2AFBBAF4A7434C531D29A43 /* Pods-MLMNetWork_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLMNetWork_Tests.release.xcconfig"; path = "Target Support Files/Pods-MLMNetWork_Tests/Pods-MLMNetWork_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E0773B65DE47CA1BEECC0B13 /* libPods-MLMNetWork_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLMNetWork_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95DE47A68448ABDE7E1D353 /* Pods-MLMNetWork_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLMNetWork_Example.debug.xcconfig"; path = "Target Support Files/Pods-MLMNetWork_Example/Pods-MLMNetWork_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 		607FACD21AFB9204008FA782 /* Example for MLMNetWork */ = {
 			isa = PBXGroup;
 			children = (
+				953C7F2424DBAEAA005A5428 /* NetWork */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -159,6 +166,16 @@
 				C2AFBBAF4A7434C531D29A43 /* Pods-MLMNetWork_Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		953C7F2424DBAEAA005A5428 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				953C7F2524DBAEC0005A5428 /* ResponseModel.swift */,
+				953C7F2724DBAECA005A5428 /* Request.swift */,
+				953C7F2924DBAF44005A5428 /* NetWorkClient.swift */,
+			);
+			name = NetWork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +333,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				953C7F2824DBAECA005A5428 /* Request.swift in Sources */,
+				953C7F2624DBAEC0005A5428 /* ResponseModel.swift in Sources */,
+				953C7F2A24DBAF44005A5428 /* NetWorkClient.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,60 +19,41 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Request.userInfo.request(successHandler: { (_, model: ResponseModel<UserInfo>, _) in
-            
-        }) { (_, _) in
-            
+        let request = Request<[Category]>()
+        request.path = "/item-center/material/category/list"
+        request.parameters = [
+            "materialType":1
+        ]
+        request.method = .get
+        request.headers = nil
+        
+        /// Completion
+        NetWorkClient.share.send(request) { (_, result) in
+            switch result {
+            case let .success(response):
+                print(response.entry ?? [])
+            case let .failure(error):
+                print(error)
+            }
         }
         
-        ResponseModel<UserInfo>.sendRequest(by: Request.userInfo, successHandler: { (task, model, responseObject) in
-            
-        }) { (_, _) in
-            
+        // Success/Failure
+        NetWorkClient.share.send(request, successHandler: { (_, response) in
+            print(response.entry ?? [])
+        }) { (_, error) in
+            print(error)
         }
         
-        let observable: Observable<ResponseModel<UserInfo>> = Request.userInfo.rx.request()
-        observable.subscribe(onNext: {
-            print($0)
+        // RX
+        NetWorkClient.share.rx.send(request).subscribe(onNext: {
+            print($0.entry ?? [])
         }).disposed(by: disposeBag)
     }
 }
 
-class ResponseModel<T>: ResponseModelProtocol {
-    var isSuccess: Bool {
-        return false
-    }
-    
-    var data: T?
+class Category: HandyJSON {
+    var catId: Int?
+    var catName: String?
     
     required init() { }
-}
-
-class UserInfo: HandyJSON {
-    required init() { }
-}
-
-
-enum Request {
-    case userInfo
-}
-
-extension Request: AlamofireRequest {
-    var path: String {
-        return ""
-    }
-    
-    var baseUrl: String {
-        return ""
-    }
-    
-    var parameter: [String : Any]? {
-        return nil
-    }
-    
-    var headers: [String : String]? {
-        return nil
-    }
-    
-    
 }

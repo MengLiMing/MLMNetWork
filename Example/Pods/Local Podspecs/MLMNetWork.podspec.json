@@ -1,6 +1,6 @@
 {
   "name": "MLMNetWork",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "summary": "Swift网络请求",
   "description": "MVVM响应式网络请求 - RxSwift、HandyJson、Alamofire",
   "homepage": "https://github.com/MengLiMing/MLMNetWork",
@@ -13,12 +13,12 @@
   },
   "source": {
     "git": "https://github.com/MengLiMing/MLMNetWork.git",
-    "tag": "0.0.3"
+    "tag": "0.0.5"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "MLMNetWork/Classes/**/*",
+  "source_files": "MLMNetWork/*.swift",
   "dependencies": {
     "RxSwift": [
       "~> 5"
@@ -32,5 +32,15 @@
     "HandyJSON": [
       "~> 5.0.1"
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Protocol",
+      "source_files": "MLMNetWork/Protocol/*.swift"
+    },
+    {
+      "name": "Client",
+      "source_files": "MLMNetWork/Client/*.swift"
+    }
+  ]
 }
