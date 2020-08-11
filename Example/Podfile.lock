@@ -1,8 +1,10 @@
 PODS:
   - Alamofire (5.2.2)
   - HandyJSON (5.0.2)
-  - MLMNetWork (0.1.2):
+  - MLMNetWork/AlamofireClient (0.1.2):
     - Alamofire (~> 5.2)
+    - MLMNetWork/Protocol
+  - MLMNetWork/Protocol (0.1.2):
     - HandyJSON (~> 5.0.1)
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
@@ -14,7 +16,7 @@ PODS:
   - RxSwift (5.1.1)
 
 DEPENDENCIES:
-  - MLMNetWork (from `../`)
+  - MLMNetWork/AlamofireClient (from `../`)
 
 SPEC REPOS:
   trunk:
@@ -31,11 +33,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
-  MLMNetWork: 2638409c915a439b44ed81b192cbe9461d39a028
+  MLMNetWork: 33649aab03bbb70a30d8fe7edc7a60a4aff801d3
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 10e6bb48444acca07b524a2ceab577d77d1f07e6
+PODFILE CHECKSUM: a90dda8e255d0f39886174175f7a768484fdcbaf
 
 COCOAPODS: 1.10.0.beta.1

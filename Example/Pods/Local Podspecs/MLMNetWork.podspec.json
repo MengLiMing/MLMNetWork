@@ -18,19 +18,33 @@
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "MLMNetWork/*/*.swift",
-  "dependencies": {
-    "RxSwift": [
-      "~> 5"
-    ],
-    "RxCocoa": [
-      "~> 5"
-    ],
-    "Alamofire": [
-      "~> 5.2"
-    ],
-    "HandyJSON": [
-      "~> 5.0.1"
-    ]
-  }
+  "subspecs": [
+    {
+      "name": "Protocol",
+      "dependencies": {
+        "RxSwift": [
+          "~> 5"
+        ],
+        "RxCocoa": [
+          "~> 5"
+        ],
+        "HandyJSON": [
+          "~> 5.0.1"
+        ]
+      },
+      "source_files": "MLMNetWork/Protocol/*.swift"
+    },
+    {
+      "name": "AlamofireClient",
+      "dependencies": {
+        "MLMNetWork/Protocol": [
+
+        ],
+        "Alamofire": [
+          "~> 5.2"
+        ]
+      },
+      "source_files": "MLMNetWork/AlamofireClient/*.swift"
+    }
+  ]
 }
