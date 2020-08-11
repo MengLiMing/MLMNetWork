@@ -18,6 +18,10 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'MLMNetWork'
+
+# 不使用Alamofire
+pod 'MLMNetWork/Protocol'
+
 ```
 
 ## 支持使用清华源
