@@ -2536,9 +2536,9 @@
 			};
 			name = Release;
 		};
-		1DCE0B71577729CDF9B12559A426A2C0 /* Release */ = {
+		1E919F2DEB5E9F6D5E04B67FE193117B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05BEB115861A5F8A9B6D352FE429CDC9 /* MLMNetWork.release.xcconfig */;
+			baseConfigurationReference = 4028E2064857326451377D37C98D7D27 /* MLMNetWork.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -2557,11 +2557,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		2AFDF3BB8995ACC4327F84E3CD6F6E26 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2634,32 +2633,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6227B192C4A3F4993E0C2CDBD4610604 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4028E2064857326451377D37C98D7D27 /* MLMNetWork.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MLMNetWork/MLMNetWork-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MODULEMAP_FILE = Headers/Public/MLMNetWork/MLMNetWork.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MLMNetWork;
-				PRODUCT_NAME = MLMNetWork;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2939,6 +2912,33 @@
 			};
 			name = Release;
 		};
+		C5057E9F122A63CCF4051E3606356B4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05BEB115861A5F8A9B6D352FE429CDC9 /* MLMNetWork.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MLMNetWork/MLMNetWork-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/MLMNetWork/MLMNetWork.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MLMNetWork;
+				PRODUCT_NAME = MLMNetWork;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		DA566C529C5DEE2B47BDB44CE2A38C54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3874B0853CA7327EBB9DDE883B0B88FB /* Pods-MLMNetWork_Tests.debug.xcconfig */;
@@ -3080,8 +3080,8 @@
 		A70FC2173792DB07EB1415A84E3E727D /* Build configuration list for PBXNativeTarget "MLMNetWork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6227B192C4A3F4993E0C2CDBD4610604 /* Debug */,
-				1DCE0B71577729CDF9B12559A426A2C0 /* Release */,
+				1E919F2DEB5E9F6D5E04B67FE193117B /* Debug */,
+				C5057E9F122A63CCF4051E3606356B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
