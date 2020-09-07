@@ -8,7 +8,6 @@ project 'MLMNetWork.xcodeproj'
 target 'MLMNetWork_Example' do
 
   pod 'MLMNetWork/AlamofireClient', :path => '../'
-
   target 'MLMNetWork_Tests' do
     inherit! :search_paths
 

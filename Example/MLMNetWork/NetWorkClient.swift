@@ -18,12 +18,11 @@ final class NetWorkClient: AlamofireClient {
     
     lazy var baseHeaders: [String : String]? = {
         return [
-            "zmjx_client":"1",
         ]
     }()
     
     var baseUrl: String {
-        return "https://api.zmjx.com"
+        return ""
     }
 }
 

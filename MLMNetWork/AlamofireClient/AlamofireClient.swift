@@ -13,6 +13,19 @@ public protocol AlamofireClient: Client {
     var baseUrl: String { get }
     /// 提供默认的Header
     var baseHeaders: [String: String]? { get }
+    
+    /// 默认为URLEncoding.default 如果Content-Type == application/json 则返回 JSONEncoding.default
+    var encoding: ParameterEncoding { get }
+}
+
+public extension AlamofireClient {
+    var baseHeaders: [String: String]? {
+        return nil
+    }
+    
+    var encoding: ParameterEncoding {
+        return URLEncoding.default
+    }
 }
 
 extension AlamofireClient {
@@ -23,14 +36,14 @@ extension AlamofireClient {
         request.headers?.forEach({
             headers.add(name: $0.key, value: $0.value)
         })
-        let request = AF.request(self.baseUrl + request.path,
+        let dataRequest = AF.request(self.baseUrl + request.path,
                                  method: method,
                                  parameters: request.parameters,
-                                 encoding: URLEncoding.default,
+                                 encoding: self.encoding,
                                  headers: headers,
                                  interceptor: nil,
                                  requestModifier: nil)
-        request.responseJSON { (response) in
+        dataRequest.responseJSON { (response) in
             var dataTask: URLSessionDataTask?
             if let currentRequest = response.request {
                 dataTask = AF.session.dataTask(with: currentRequest)
@@ -42,6 +55,6 @@ extension AlamofireClient {
                 completionHandler(dataTask, MLMNetWork.Result.failure(error))
             }
         }
-        return request.task
+        return dataRequest.task
     }
 }

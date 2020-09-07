@@ -19,23 +19,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let request = Request<[Category]>()
-        request.path = "/item-center/material/category/list"
+        request.path = ""
         request.parameters = [
-            "materialType":1
+            "loginType": "ACCOUNT",
+            "accountLoginRequest": [
+                "mobile": "13014795306",
+                "password": "12345678",
+                "countryCode": "86"
+            ]
         ]
-        request.method = .get
-        request.headers = nil
+        request.method = .post
         
         /// Completion
-        NetWorkClient.share.send(request) { (_, result) in
-            switch result {
-            case let .success(response):
-                print(response.entry ?? [])
-            case let .failure(error):
-                print(error)
-            }
-        }
+        //        NetWorkClient.share.send(request) { (_, result) in
+        //            switch result {
+        //            case let .success(response):
+        //                print(response.entry ?? [])
+        //            case let .failure(error):
+        //                print(error)
+        //            }
+        //        }
         
         // Success/Failure
         NetWorkClient.share.send(request, successHandler: { (_, response) in
@@ -45,9 +52,9 @@ class ViewController: UIViewController {
         }
         
         // RX
-        NetWorkClient.share.rx.send(request).subscribe(onNext: {
-            print($0.entry ?? [])
-        }).disposed(by: disposeBag)
+        //                NetWorkClient.share.rx.send(request).subscribe(onNext: {
+        //                    print($0.entry ?? [])
+        //                }).disposed(by: disposeBag)
     }
 }
 
@@ -56,4 +63,13 @@ class Category: HandyJSON {
     var catName: String?
     
     required init() { }
+}
+
+extension Dictionary {
+    func jsonString(prettify: Bool = false) -> String? {
+        guard JSONSerialization.isValidJSONObject(self) else { return nil }
+        let options = (prettify == true) ? JSONSerialization.WritingOptions.prettyPrinted : JSONSerialization.WritingOptions()
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: self, options: options) else { return nil }
+        return String(data: jsonData, encoding: .utf8)
+    }
 }

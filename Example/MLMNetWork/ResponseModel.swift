@@ -32,7 +32,7 @@ extension ResponseModel: ErrorJudge {
     }
     
     var isSuccess: Bool {
-        return self.responseCode == 0
+        return self.status
     }
     
     func errorOccurs() {
