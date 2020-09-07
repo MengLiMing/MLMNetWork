@@ -9,6 +9,7 @@
 import Foundation
 import MLMNetWork
 import RxSwift
+import Alamofire
 
 final class NetWorkClient: AlamofireClient {
     
@@ -18,11 +19,16 @@ final class NetWorkClient: AlamofireClient {
     
     lazy var baseHeaders: [String : String]? = {
         return [
+            "":""
         ]
     }()
     
     var baseUrl: String {
         return ""
+    }
+    
+    var encoding: ParameterEncoding {
+        return JSONEncoding.default
     }
 }
 
