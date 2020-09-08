@@ -26,10 +26,6 @@ final class NetWorkClient: AlamofireClient {
     var baseUrl: String {
         return ""
     }
-    
-    var encoding: ParameterEncoding {
-        return JSONEncoding.default
-    }
 }
 
 extension NetWorkClient: ReactiveCompatible { }

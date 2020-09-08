@@ -22,17 +22,21 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let request = Request<[Category]>()
+//        request.path = "/app-web/user/userInfo/getByInviteCode"
+//        request.method = .get
+//        request.parameters = ["inviteCode": "123123"]
+        
         let request = Request<[Category]>()
-        request.path = ""
+        request.path = "/app-web/user/login/doLogin"
+        request.method = .post
         request.parameters = [
             "loginType": "ACCOUNT",
             "accountLoginRequest": [
                 "mobile": "13014795306",
                 "password": "12345678",
-                "countryCode": "86"
-            ]
+                "countryCode": "86"]
         ]
-        request.method = .post
         
         /// Completion
         //        NetWorkClient.share.send(request) { (_, result) in

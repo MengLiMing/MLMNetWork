@@ -15,7 +15,7 @@ public protocol AlamofireClient: Client {
     var baseHeaders: [String: String]? { get }
     
     /// 默认为URLEncoding.default 如果Content-Type == application/json 则返回 JSONEncoding.default
-    var encoding: ParameterEncoding { get }
+    var encodingByJson: Bool { get }
 }
 
 public extension AlamofireClient {
@@ -23,14 +23,18 @@ public extension AlamofireClient {
         return nil
     }
     
-    var encoding: ParameterEncoding {
-        return URLEncoding.default
+    var encodingByJson: Bool {
+        return true
     }
 }
 
 extension AlamofireClient {
     @discardableResult
     public func send<T>(_ request: T, completionHandler: @escaping RequestCompletedHandler<T.Response>) -> URLSessionTask? where T : Request {
+        var encoding: ParameterEncoding = URLEncoding.default
+        if request.method == .post && self.encodingByJson {
+            encoding = JSONEncoding.default
+        }
         let method = HTTPMethod(rawValue: request.method.rawValue)
         var headers = HTTPHeaders(self.baseHeaders ?? [:])
         request.headers?.forEach({
@@ -39,7 +43,7 @@ extension AlamofireClient {
         let dataRequest = AF.request(self.baseUrl + request.path,
                                  method: method,
                                  parameters: request.parameters,
-                                 encoding: self.encoding,
+                                 encoding: encoding,
                                  headers: headers,
                                  interceptor: nil,
                                  requestModifier: nil)
