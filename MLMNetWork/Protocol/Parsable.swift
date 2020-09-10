@@ -10,15 +10,15 @@ import HandyJSON
 
 public typealias MParsable = MLMNetWork.Parsable
 
-public enum ParseError: Error {
+public enum ParseError<T>: Error {
     /// 无数据
     case noData
     /// 解析失败
     case notJson(Any)
     /// 未知
     case unknown(Any)
-    /// 自定义 错误码 错误信息 返回数据
-    case custom(Int,String,Any)
+    /// 其他错误
+    case custom(T)
 }
 
 public enum Result<T> {
