@@ -22,43 +22,38 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let request = Request<[Category]>()
-//        request.path = "/app-web/user/userInfo/getByInviteCode"
-//        request.method = .get
-//        request.parameters = ["inviteCode": "123123"]
-        
-        let request = Request<[Category]>()
-        request.path = "/app-web/user/login/doLogin"
-        request.method = .post
+        let request = Request<Any>()
+        request.path = "/app-web/advertPositions/list"
+        request.method = .get
         request.parameters = [
-            "loginType": "ACCOUNT",
-            "accountLoginRequest": [
-                "mobile": "13014795306",
-                "password": "12345678",
-                "countryCode": "86"]
+            "pageId": "0"
         ]
         
         /// Completion
-        //        NetWorkClient.share.send(request) { (_, result) in
-        //            switch result {
-        //            case let .success(response):
-        //                print(response.entry ?? [])
-        //            case let .failure(error):
-        //                print(error)
-        //            }
-        //        }
+//        NetWorkClient.share.send(request) { (_, result) in
+//            switch result {
+//            case let .success(response):
+//                print(response.entry ?? [])
+//            case let .cache(response):
+//                print(response.entry ?? [])
+//            case let .failure(error):
+//                print(error)
+//            }
+//        }
         
         // Success/Failure
-        NetWorkClient.share.send(request, successHandler: { (_, response) in
-            print(response.entry ?? [])
-        }) { (_, error) in
-            print(error)
-        }
-        
+//        NetWorkClient.share.send(request) { (_, response) in
+//            print(response.entry ?? [])
+//        } cacheHandler: { (_, response) in
+//            print(response.entry ?? [])
+//        } failureHandler: { (_, error) in
+//            print(error)
+//        }
+
         // RX
-        //                NetWorkClient.share.rx.send(request).subscribe(onNext: {
-        //                    print($0.entry ?? [])
-        //                }).disposed(by: disposeBag)
+        NetWorkClient.share.rx.send(request).subscribe(onNext: {
+            print($0.entry ?? [])
+        }).disposed(by: disposeBag)
     }
 }
 

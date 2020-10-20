@@ -23,12 +23,20 @@ public enum ParseError<T>: Error {
 
 public enum Result<T> {
     case success(T)
+    case cache(T)
     case failure(Error)
 }
 
 /// 数据解析
 public protocol Parsable {
     static func parse(data: Any?) -> Result<Self>
+    static func parse(data: Any?, isCache: Bool) -> Result<Self>
+}
+
+public extension Parsable {
+    static func parse(data: Any?) -> Result<Self> {
+        return Self.parse(data: data, isCache: false)
+    }
 }
 
 

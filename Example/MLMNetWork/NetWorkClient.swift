@@ -19,7 +19,7 @@ final class NetWorkClient: AlamofireClient {
     
     lazy var baseHeaders: [String : String]? = {
         return [
-            "":""
+            "":"",
         ]
     }()
     

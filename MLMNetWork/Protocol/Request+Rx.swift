@@ -16,7 +16,8 @@ public extension Reactive where Base: Client {
                 switch result {
                 case let .success(response):
                     observer.onNext(response)
-                    observer.onCompleted()
+                case let .cache(cacehResponse):
+                    observer.onNext(cacehResponse)
                 case let .failure(error):
                     observer.onError(error)
                 }

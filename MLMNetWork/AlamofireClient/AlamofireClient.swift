@@ -40,6 +40,14 @@ extension AlamofireClient {
         request.headers?.forEach({
             headers.add(name: $0.key, value: $0.value)
         })
+        request.parseQueue.async {
+            if let responseObject = request.parseCache(),
+               case let .cache(_) = responseObject {
+                DispatchQueue.main.async {
+                    completionHandler(nil, responseObject)
+                }
+            }
+        }
         let dataRequest = AF.request(self.baseUrl + request.path,
                                  method: method,
                                  parameters: request.parameters,
@@ -54,9 +62,17 @@ extension AlamofireClient {
             }
             switch response.result {
             case let .success(responseObject):
-                completionHandler(dataTask, T.Response.parse(data: responseObject))
+                request.parseQueue.async {
+                    request.saveCache(responseObject)
+                    let result = T.Response.parse(data: responseObject)
+                    DispatchQueue.main.async {
+                        completionHandler(dataTask, result)
+                    }
+                }
             case let .failure(error):
-                completionHandler(dataTask, MLMNetWork.Result.failure(error))
+                DispatchQueue.main.async {
+                    completionHandler(dataTask, MLMNetWork.Result.failure(error))
+                }
             }
         }
         return dataRequest.task

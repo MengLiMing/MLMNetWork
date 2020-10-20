@@ -22,4 +22,17 @@ class Request<Data>: MRequest  {
     
     var parameters: [String : Any]?
     
+    var cachePolicy: RequestCachePolicy = .cacheAndRemote
+    
+    func cache(_ response: Any?) {
+    }
+    
+    func cache() -> Any? {
+        return [
+            "status":true,
+            "entry":[
+                "cache":"cache"
+            ]
+        ]
+    }
 }
