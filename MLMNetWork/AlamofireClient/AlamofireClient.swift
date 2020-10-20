@@ -63,7 +63,7 @@ extension AlamofireClient {
             switch response.result {
             case let .success(responseObject):
                 request.parseQueue.async {
-                    request.saveCache(responseObject)
+                    request.cache(responseObject)
                     let result = T.Response.parse(data: responseObject)
                     DispatchQueue.main.async {
                         completionHandler(dataTask, result)

@@ -64,11 +64,4 @@ internal extension Request {
         let result = Response.parse(data: responseObject, isCache: true)
         return result
     }
-    
-    func saveCache(_ response: Any?) {
-        if self.cachePolicy == .justRemote {
-            return
-        }
-        self.cache(response)
-    }
 }
