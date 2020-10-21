@@ -42,7 +42,9 @@ public extension Parsable where Self: HandyJSON & ErrorJudge {
         }
         if !model.isSuccess {
             /// 错误信息时额外处理
-            model.errorOccurs()
+            DispatchQueue.main.async {
+                model.errorOccurs()
+            }
             return Result<Self>.failure(ParseError<Self>.custom(model))
         }
         if isCache {
