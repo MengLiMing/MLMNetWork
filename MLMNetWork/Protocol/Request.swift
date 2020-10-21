@@ -40,7 +40,7 @@ public protocol Request {
     var parseQueue: DispatchQueue { get }
 }
 
-private let requestParseQueue: DispatchQueue = DispatchQueue(label: "com.MLMNetWork.parseQueue", qos: .default)
+private let requestParseQueue: DispatchQueue = DispatchQueue(label: "com.MLMNetWork.parseQueue", qos: .userInteractive)
 
 public extension Request {
     func cache(_ response: Any?) { }

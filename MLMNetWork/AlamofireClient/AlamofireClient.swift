@@ -70,8 +70,12 @@ extension AlamofireClient {
                     }
                 }
             case let .failure(error):
-                DispatchQueue.main.async {
-                    completionHandler(dataTask, MLMNetWork.Result.failure(error))
+                /// 添加进解析数据线程 保证在网络请求失败的情况下，cache执行后执行error，
+                /// rx执行error后 不执行onNext 导致bug
+                request.parseQueue.async {
+                    DispatchQueue.main.async {
+                        completionHandler(dataTask, MLMNetWork.Result.failure(error))
+                    }
                 }
             }
         }
