@@ -19,7 +19,7 @@ MLMNetWork is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'MLMNetWork', '~> 0.2.1'
+pod 'MLMNetWork', '~> 0.2.3'
 
 # 不使用Alamofire
 pod 'MLMNetWork/Protocol'

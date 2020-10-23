@@ -10,8 +10,7 @@ import RxSwift
 
 public extension Reactive where Base: Client {
     func send<T: Request>(_ request: T) -> Observable<T.Response> {
-        typealias R = T.Response
-        return Observable<R>.create { (observer) -> Disposable in
+        return Observable<T.Response>.create { (observer) -> Disposable in
             let task = self.base.send(request) { (_, result) in
                 switch result {
                 case let .success(response):
@@ -19,7 +18,12 @@ public extension Reactive where Base: Client {
                 case let .cache(cacehResponse):
                     observer.onNext(cacehResponse)
                 case let .failure(error):
-                    observer.onError(error)
+                    if let parseError = error as? ParseError<T.Response>,
+                       case let .custom(model) = parseError {
+                        observer.onNext(model)
+                    } else {
+                        observer.onError(error)
+                    }
                 }
             }
             return Disposables.create {
