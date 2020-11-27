@@ -10,9 +10,19 @@ import RxSwift
 
 public typealias MRequest = MLMNetWork.Request
 
-public enum RequestMethod: String {
-    case get = "GET"
-    case post = "POST"
+public struct RequestMethod: RawRepresentable {
+    /// `GET` method.
+    public static let get = RequestMethod(rawValue: "GET")
+    /// `POST` method.
+    public static let post = RequestMethod(rawValue: "POST")
+    /// `DELETE` method.
+    public static let delete = RequestMethod(rawValue: "DELETE")
+
+    public let rawValue: String
+
+    public init(rawValue: String) {
+        self.rawValue = rawValue
+    }
 }
 
 public enum RequestCachePolicy {
