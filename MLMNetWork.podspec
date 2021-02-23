@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MLMNetWork'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = 'Swift网络请求'
   
   

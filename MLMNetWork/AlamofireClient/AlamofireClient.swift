@@ -55,7 +55,7 @@ extension AlamofireClient {
                                  headers: headers,
                                  interceptor: nil,
                                  requestModifier: nil)
-        dataRequest.responseJSON { (response) in
+        dataRequest.responseSpecialJSON { (response) in
             var dataTask: URLSessionDataTask?
             if let currentRequest = response.request {
                 dataTask = AF.session.dataTask(with: currentRequest)
@@ -80,5 +80,67 @@ extension AlamofireClient {
             }
         }
         return dataRequest.task
+    }
+}
+
+
+/// 处理JSON中unicode无法解析的问题 例如："title": "\uDCAB"
+extension DataRequest {
+    @discardableResult
+    public func responseSpecialJSON(queue: DispatchQueue = .main,
+                             dataPreprocessor: DataPreprocessor = JSONSpecialResponseSerializer.defaultDataPreprocessor,
+                             emptyResponseCodes: Set<Int> = JSONSpecialResponseSerializer.defaultEmptyResponseCodes,
+                             emptyRequestMethods: Set<HTTPMethod> = JSONSpecialResponseSerializer.defaultEmptyRequestMethods,
+                             options: JSONSerialization.ReadingOptions = .allowFragments,
+                             completionHandler: @escaping (AFDataResponse<Any>) -> Void) -> Self {
+        response(queue: queue,
+                 responseSerializer: JSONSpecialResponseSerializer(dataPreprocessor: dataPreprocessor,
+                                                            emptyResponseCodes: emptyResponseCodes,
+                                                            emptyRequestMethods: emptyRequestMethods,
+                                                            options: options),
+                 completionHandler: completionHandler)
+    }
+}
+
+public final class JSONSpecialResponseSerializer: ResponseSerializer {
+    public let dataPreprocessor: DataPreprocessor
+    public let emptyResponseCodes: Set<Int>
+    public let emptyRequestMethods: Set<HTTPMethod>
+    public let options: JSONSerialization.ReadingOptions
+
+    public init(dataPreprocessor: DataPreprocessor = JSONSpecialResponseSerializer.defaultDataPreprocessor,
+                emptyResponseCodes: Set<Int> = JSONSpecialResponseSerializer.defaultEmptyResponseCodes,
+                emptyRequestMethods: Set<HTTPMethod> = JSONSpecialResponseSerializer.defaultEmptyRequestMethods,
+                options: JSONSerialization.ReadingOptions = .allowFragments) {
+        self.dataPreprocessor = dataPreprocessor
+        self.emptyResponseCodes = emptyResponseCodes
+        self.emptyRequestMethods = emptyRequestMethods
+        self.options = options
+    }
+
+    public func serialize(request: URLRequest?, response: HTTPURLResponse?, data: Data?, error: Error?) throws -> Any {
+        guard error == nil else { throw error! }
+
+        guard var data = data, !data.isEmpty else {
+            guard emptyResponseAllowed(forRequest: request, response: response) else {
+                throw AFError.responseSerializationFailed(reason: .inputDataNilOrZeroLength)
+            }
+
+            return NSNull()
+        }
+
+        data = try dataPreprocessor.preprocess(data)
+
+        do {
+            return try JSONSerialization.jsonObject(with: data, options: options)
+        } catch {
+            guard let str = String(data: data, encoding: .utf8),
+                  let transformStr = str.applyingTransform(StringTransform(rawValue: "Any-Hex/Java"), reverse: true),
+                  let transformData = transformStr.data(using: .utf8),
+                  let obj = try? JSONSerialization.jsonObject(with: transformData, options: options)  else {
+                throw AFError.responseSerializationFailed(reason: .jsonSerializationFailed(error: error))
+            }
+            return obj
+        }
     }
 }

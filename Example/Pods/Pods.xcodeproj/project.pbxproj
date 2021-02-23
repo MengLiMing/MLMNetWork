@@ -2485,11 +2485,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		115C090B78D096ED018F50BE261BD576 /* Debug */ = {
+		139ECDE39963CBFEDC17E1F804358AA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9C2F0881FA0BAFB208453C53D04CC95 /* RxCocoa.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2510,11 +2509,34 @@
 			};
 			name = Debug;
 		};
-		19CBEEA225F1DD6553116AA12AA36141 /* Release */ = {
+		1728475DDCEBEE2B5D2179F9DBD91DB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D702DCD18F2BBD1CE40058DDAEFAEAC /* RxRelay.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/RxRelay/RxRelay-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/RxRelay/RxRelay.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = RxRelay;
+				PRODUCT_NAME = RxRelay;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2324FE81145BA050FE2C81EC58E0F305 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F7758D361C919D871A5C22E5651B131 /* RxRelay.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2536,12 +2558,11 @@
 			};
 			name = Release;
 		};
-		1E919F2DEB5E9F6D5E04B67FE193117B /* Debug */ = {
+		554EF1D63561F3862699E6BD3357CE75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4028E2064857326451377D37C98D7D27 /* MLMNetWork.debug.xcconfig */;
+			baseConfigurationReference = 05BEB115861A5F8A9B6D352FE429CDC9 /* MLMNetWork.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2559,64 +2580,14 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2AFDF3BB8995ACC4327F84E3CD6F6E26 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BF329F3A6D52BE1EA5E042E76D918B6 /* Pods-MLMNetWork_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		3124AE689E55C905A6E3BD239058289B /* Release */ = {
+		68C887895AAF7DD42D2BC2291DAB72E3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECEED8B5582B36F80A863641E3EB1071 /* Alamofire.release.xcconfig */;
+			baseConfigurationReference = F56B1EE97044683CDC1C203DFF7BFBEA /* RxSwift.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		502D5B790C838E574C9B7EE5C55E4CB7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF35E822E185DA307B40FFBD239FC0FF /* RxSwift.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2634,36 +2605,33 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		6AB74E5DF26EC2DBB67152690CE4F3A2 /* Debug */ = {
+		6BF80F174848D04E6E67578E0528419D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 044C709AC47027C286BD3B94F22943D6 /* Alamofire.debug.xcconfig */;
+			baseConfigurationReference = 0BF329F3A6D52BE1EA5E042E76D918B6 /* Pods-MLMNetWork_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
+				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		6ACE01E101CD05C2D9274B28BE586706 /* Release */ = {
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -2690,6 +2658,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2724,37 +2693,33 @@
 			};
 			name = Release;
 		};
-		888637E0078E8938FADF7EB245AFDD1F /* Release */ = {
+		810063104186A837118DC459BB10F8AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F56B1EE97044683CDC1C203DFF7BFBEA /* RxSwift.release.xcconfig */;
+			baseConfigurationReference = 34A0D27D560ECE0D711A270DDA9E91C2 /* Pods-MLMNetWork_Example.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/RxSwift/RxSwift-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/RxSwift/RxSwift.modulemap;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MLMNetWork_Example/Pods-MLMNetWork_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = RxSwift;
-				PRODUCT_NAME = RxSwift;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		8A11647B3D4BD2EB528D5BD2512F357B /* Debug */ = {
+		89E8795269454F4E6F908EA48304665A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E7F8A01C5198D3D6D4343449D297A34 /* HandyJSON.debug.xcconfig */;
+			baseConfigurationReference = C53412A7D684C9543DE2EEF569DFE742 /* HandyJSON.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2771,14 +2736,14 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		A989A51CB81430C3B5656F4DA5AF994D /* Release */ = {
+		9F4E87C1614DFA9CA4EE8408CF61D451 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 56363F2DA3C9B8E86C2A48BBD412803E /* RxCocoa.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2800,13 +2765,12 @@
 			};
 			name = Release;
 		};
-		ADA6FB68F48163E7AC1C998391894891 /* Debug */ = {
+		AD7ED21BB36E816ED083AD2C39D5D904 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0B6EA28F212687B6AA6B08FF78CB643 /* Pods-MLMNetWork_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2823,7 +2787,53 @@
 			};
 			name = Debug;
 		};
-		B1B259C5FB7465EF9C71163827046E70 /* Debug */ = {
+		B82461ACD68C0BE25BB3C59807898EF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3874B0853CA7327EBB9DDE883B0B88FB /* Pods-MLMNetWork_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D076985004E7B530C78695A96217A9FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4028E2064857326451377D37C98D7D27 /* MLMNetWork.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MLMNetWork/MLMNetWork-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/MLMNetWork/MLMNetWork.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MLMNetWork;
+				PRODUCT_NAME = MLMNetWork;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -2850,6 +2860,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2888,95 +2899,46 @@
 			};
 			name = Debug;
 		};
-		B2D7D85E4D9593BCCD5055AA2D81A254 /* Release */ = {
+		DE28A9041C3450C10D259BC613EB85A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34A0D27D560ECE0D711A270DDA9E91C2 /* Pods-MLMNetWork_Example.release.xcconfig */;
+			baseConfigurationReference = 044C709AC47027C286BD3B94F22943D6 /* Alamofire.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MLMNetWork_Example/Pods-MLMNetWork_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C5057E9F122A63CCF4051E3606356B4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05BEB115861A5F8A9B6D352FE429CDC9 /* MLMNetWork.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MLMNetWork/MLMNetWork-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MODULEMAP_FILE = Headers/Public/MLMNetWork/MLMNetWork.modulemap;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MLMNetWork;
-				PRODUCT_NAME = MLMNetWork;
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		DA566C529C5DEE2B47BDB44CE2A38C54 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3874B0853CA7327EBB9DDE883B0B88FB /* Pods-MLMNetWork_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		E2EAB610220A0D65FC7A9939B6E2E582 /* Debug */ = {
+		EAF40B3C361DEEE60C469CD5F01CD71D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D702DCD18F2BBD1CE40058DDAEFAEAC /* RxRelay.debug.xcconfig */;
+			baseConfigurationReference = FF35E822E185DA307B40FFBD239FC0FF /* RxSwift.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/RxRelay/RxRelay-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/RxSwift/RxSwift-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/RxRelay/RxRelay.modulemap;
+				MODULEMAP_FILE = Headers/Public/RxSwift/RxSwift.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = RxRelay;
-				PRODUCT_NAME = RxRelay;
+				PRODUCT_MODULE_NAME = RxSwift;
+				PRODUCT_NAME = RxSwift;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2986,11 +2948,36 @@
 			};
 			name = Debug;
 		};
-		EA88812A9958B439F7DE2A1C73F8AF37 /* Release */ = {
+		EC9052E3264D666886033FCED60C79ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C53412A7D684C9543DE2EEF569DFE742 /* HandyJSON.release.xcconfig */;
+			baseConfigurationReference = ECEED8B5582B36F80A863641E3EB1071 /* Alamofire.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAFE9D6DED1BF427F244313AAD588A4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E7F8A01C5198D3D6D4343449D297A34 /* HandyJSON.debug.xcconfig */;
+			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -3007,9 +2994,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -3017,8 +3003,8 @@
 		13C5572280E06AB03D580CABD0E0CB49 /* Build configuration list for PBXNativeTarget "RxRelay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2EAB610220A0D65FC7A9939B6E2E582 /* Debug */,
-				19CBEEA225F1DD6553116AA12AA36141 /* Release */,
+				1728475DDCEBEE2B5D2179F9DBD91DB8 /* Debug */,
+				2324FE81145BA050FE2C81EC58E0F305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3026,8 +3012,8 @@
 		1D06F0F56CC7BB25D0F0253E62A35541 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6AB74E5DF26EC2DBB67152690CE4F3A2 /* Debug */,
-				3124AE689E55C905A6E3BD239058289B /* Release */,
+				DE28A9041C3450C10D259BC613EB85A7 /* Debug */,
+				EC9052E3264D666886033FCED60C79ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3035,8 +3021,8 @@
 		20F178FA4884014A875EC6BBD0169959 /* Build configuration list for PBXNativeTarget "HandyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A11647B3D4BD2EB528D5BD2512F357B /* Debug */,
-				EA88812A9958B439F7DE2A1C73F8AF37 /* Release */,
+				FAFE9D6DED1BF427F244313AAD588A4F /* Debug */,
+				89E8795269454F4E6F908EA48304665A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3044,8 +3030,8 @@
 		220EA8634C6029F750AA6CCBA14DD26B /* Build configuration list for PBXNativeTarget "RxSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				502D5B790C838E574C9B7EE5C55E4CB7 /* Debug */,
-				888637E0078E8938FADF7EB245AFDD1F /* Release */,
+				EAF40B3C361DEEE60C469CD5F01CD71D /* Debug */,
+				68C887895AAF7DD42D2BC2291DAB72E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3053,8 +3039,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B1B259C5FB7465EF9C71163827046E70 /* Debug */,
-				6ACE01E101CD05C2D9274B28BE586706 /* Release */,
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3062,8 +3048,8 @@
 		950DB2CDD1B453581DC2649F288A976E /* Build configuration list for PBXNativeTarget "RxCocoa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				115C090B78D096ED018F50BE261BD576 /* Debug */,
-				A989A51CB81430C3B5656F4DA5AF994D /* Release */,
+				139ECDE39963CBFEDC17E1F804358AA2 /* Debug */,
+				9F4E87C1614DFA9CA4EE8408CF61D451 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3071,8 +3057,8 @@
 		A1D7687AEC2B3AD1595F437ABC42D9BF /* Build configuration list for PBXNativeTarget "Pods-MLMNetWork_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA566C529C5DEE2B47BDB44CE2A38C54 /* Debug */,
-				2AFDF3BB8995ACC4327F84E3CD6F6E26 /* Release */,
+				B82461ACD68C0BE25BB3C59807898EF0 /* Debug */,
+				6BF80F174848D04E6E67578E0528419D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3080,8 +3066,8 @@
 		A70FC2173792DB07EB1415A84E3E727D /* Build configuration list for PBXNativeTarget "MLMNetWork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E919F2DEB5E9F6D5E04B67FE193117B /* Debug */,
-				C5057E9F122A63CCF4051E3606356B4A /* Release */,
+				D076985004E7B530C78695A96217A9FA /* Debug */,
+				554EF1D63561F3862699E6BD3357CE75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3089,8 +3075,8 @@
 		EB48FC1DB87EA30045F6317616078E0E /* Build configuration list for PBXNativeTarget "Pods-MLMNetWork_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADA6FB68F48163E7AC1C998391894891 /* Debug */,
-				B2D7D85E4D9593BCCD5055AA2D81A254 /* Release */,
+				AD7ED21BB36E816ED083AD2C39D5D904 /* Debug */,
+				810063104186A837118DC459BB10F8AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
